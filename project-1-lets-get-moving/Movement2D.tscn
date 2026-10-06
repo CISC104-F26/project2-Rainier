@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d2tc7ewcof7ec"]
+
+[ext_resource type="Texture2D" uid="uid://dxra23csaktci" path="res://Tails flying.webp" id="1_sr0xe"]
+[ext_resource type="Script" uid="uid://cle1lgf8s7nfy" path="res://player.gd" id="2_3bbir"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3k1io"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1v27e"]
+
+[node name="Node2D" type="Node2D" unique_id=197208117]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=968800795]
+z_index = 1
+position = Vector2(123.00001, 184)
+scale = Vector2(0.2954166, 0.30999997)
+texture = ExtResource("1_sr0xe")
+script = ExtResource("2_3bbir")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1773094580]
+mesh = SubResource("BoxMesh_3k1io")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1934496993]
+mesh = SubResource("BoxMesh_1v27e")
