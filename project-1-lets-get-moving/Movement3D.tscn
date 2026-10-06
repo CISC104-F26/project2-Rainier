@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dx6kbn7xj4a1w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_otwqj"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_lqnex"]
+sky_material = SubResource("ProceduralSkyMaterial_otwqj")
+
+[sub_resource type="Environment" id="Environment_8kc73"]
+background_mode = 2
+sky = SubResource("Sky_lqnex")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3k1io"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3k1io"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_1v27e"]
+
+[node name="Node3D" type="Node3D" unique_id=794439294]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1031268840]
+environment = SubResource("Environment_8kc73")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1939253137]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player3D" type="MeshInstance3D" parent="." unique_id=1067010963]
+mesh = SubResource("CapsuleMesh_3k1io")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1524363676]
+mesh = SubResource("BoxMesh_3k1io")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=386946861]
+mesh = SubResource("SphereMesh_1v27e")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=794166136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30274856, 2.2847383)
