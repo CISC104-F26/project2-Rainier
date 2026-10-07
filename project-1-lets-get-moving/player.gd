@@ -23,3 +23,5 @@ func _process(delta: float) -> void:
 		position=position+Vector2(0,-1)*movement_speed*delta
 	if Input.is_action_pressed("move_down"):
 		position=position+Vector2(0,1)*movement_speed*delta
+	if Input.is_action_just_pressed("teleport"):
+		global_position=get_global_mouse_position()
