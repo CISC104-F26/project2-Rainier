@@ -16,6 +16,8 @@ scale = Vector2(0.2954166, 0.30999997)
 texture = ExtResource("1_sr0xe")
 script = ExtResource("2_3bbir")
 movement_speed = 450
+normal_speed = 700
+sprint_speed = 2000
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1773094580]
 mesh = SubResource("BoxMesh_3k1io")
