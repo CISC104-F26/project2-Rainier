@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dx6kbn7xj4a1w"]
 
+[ext_resource type="Script" uid="uid://banmkhbpf2wet" path="res://player_3d.gd" id="1_lqnex"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_otwqj"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,12 +30,14 @@ shadow_enabled = true
 
 [node name="Player3D" type="MeshInstance3D" parent="." unique_id=1067010963]
 mesh = SubResource("CapsuleMesh_3k1io")
+script = ExtResource("1_lqnex")
+movement_speed = 10
+
+[node name="Camera3D" type="Camera3D" parent="Player3D" unique_id=794166136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30274856, 2.2847383)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1524363676]
 mesh = SubResource("BoxMesh_3k1io")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=386946861]
 mesh = SubResource("SphereMesh_1v27e")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=794166136]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30274856, 2.2847383)
